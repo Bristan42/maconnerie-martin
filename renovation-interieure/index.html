@@ -334,7 +334,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 <style>
 .service-hero{padding:0;background:var(--navy);position:relative;overflow:hidden}
 .service-hero-texture{position:absolute;inset:0;opacity:.12;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.025) 2px,rgba(255,255,255,.025) 4px),repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(255,255,255,.01) 30px,rgba(255,255,255,.01) 31px)}
-.service-hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;padding:72px 24px}
+.service-hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;padding:52px 24px}
 .service-hero-content{min-width:0}
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);margin-bottom:24px;flex-wrap:wrap}
 .breadcrumb a{color:rgba(255,255,255,.5);transition:color .15s}
@@ -345,7 +345,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .service-hero-sub{font-size:16px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:32px}
 .service-hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
 .service-hero-media{border-radius:12px;overflow:hidden;position:relative;box-shadow:0 24px 64px rgba(0,0,0,.4)}
-.service-hero-media img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.service-hero-media img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 /* ── Nos engagements — icône gauche + texte droite ── */
 .avantages-list{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .avantage{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1.5px solid var(--border);border-radius:10px;transition:border-color .2s,box-shadow .2s}
@@ -358,8 +358,7 @@ footer{background:var(--navy);padding:56px 24px 32px}
 /* ── Trust strip (certifs) — bande navy en continuité du hero ── */
 .srv-certs{background:var(--navy);padding:0;border-top:1px solid rgba(255,255,255,.07)}
 .srv-certs .certs-inner{gap:0}
-.srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none;border-right:1px solid rgba(255,255,255,.07)}
-.srv-certs .cert:last-child{border-right:none}
+.srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none}
 .srv-certs .cert:hover{background:rgba(255,255,255,.04)}
 .srv-certs .cert-name{color:#fff}
 .srv-certs .cert-desc{color:rgba(255,255,255,.45)}
@@ -369,9 +368,6 @@ footer{background:var(--navy);padding:56px 24px 32px}
   .service-hero-media{display:none}
   .avantages-list{grid-template-columns:1fr}
   .srv-certs .certs-inner{grid-template-columns:repeat(2,1fr)}
-  .srv-certs .cert:nth-child(2){border-right:none}
-  .srv-certs .cert:nth-child(3){border-top:1px solid rgba(255,255,255,.07)}
-  .srv-certs .cert:nth-child(4){border-top:1px solid rgba(255,255,255,.07)}
 }
 @media(max-width:600px){
   .service-hero-ctas{flex-direction:column;align-items:stretch}
