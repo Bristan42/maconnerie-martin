@@ -355,10 +355,23 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .avantage h4{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin:0}
 /* ── FAQ — Option A (accordéon pleine largeur) ── */
 .faq-list{margin-top:48px!important;display:block!important}
+/* ── Trust strip (certifs) — juste sous le hero ── */
+.srv-certs{background:var(--bg);padding:0;border-bottom:1.5px solid var(--border)}
+.srv-certs .certs-inner{gap:0}
+.srv-certs .cert{padding:22px 16px;border-radius:0;background:transparent;border:none;border-right:1px solid var(--border)}
+.srv-certs .cert:last-child{border-right:none}
+.srv-certs .cert:hover{background:var(--bg-alt);border-color:var(--border)}
+.srv-certs .cert-name{color:var(--text)}
+.srv-certs .cert-desc{color:var(--text-2)}
+.srv-certs .cert-icon{background:rgba(200,98,26,.1)}
 @media(max-width:960px){
   .service-hero-inner{grid-template-columns:1fr;padding:60px 24px}
   .service-hero-media{display:none}
   .avantages-list{grid-template-columns:1fr}
+  .srv-certs .certs-inner{grid-template-columns:repeat(2,1fr)}
+  .srv-certs .cert:nth-child(2){border-right:none}
+  .srv-certs .cert:nth-child(3){border-top:1px solid var(--border)}
+  .srv-certs .cert:nth-child(4){border-top:1px solid var(--border)}
 }
 @media(max-width:600px){
   .service-hero-ctas{flex-direction:column;align-items:stretch}
@@ -432,6 +445,31 @@ footer{background:var(--navy);padding:56px 24px 32px}
   </div>
 </section>
 
+<div class="certs srv-certs">
+  <div class="certs-inner">
+    <div class="cert reveal">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+      <div class="cert-name">Qualibat</div>
+      <div class="cert-desc">Certification bâtiment</div>
+    </div>
+    <div class="cert reveal d1">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+      <div class="cert-name">Garantie décennale</div>
+      <div class="cert-desc">Travaux assurés 10 ans</div>
+    </div>
+    <div class="cert reveal d2">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg></div>
+      <div class="cert-name">RC Professionnelle</div>
+      <div class="cert-desc">Responsabilité civile</div>
+    </div>
+    <div class="cert reveal d3">
+      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="cert-name">Devis sous 48h</div>
+      <div class="cert-desc">Gratuit, sans engagement</div>
+    </div>
+  </div>
+</div>
+
 <section class="section">
   <div class="inner">
     <div class="section-label reveal">Nos engagements</div>
@@ -473,31 +511,6 @@ footer{background:var(--navy);padding:56px 24px 32px}
     </div>
   </div>
 </section>
-
-<div class="certs">
-  <div class="certs-inner">
-    <div class="cert reveal">
-      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-      <div class="cert-name">Qualibat</div>
-      <div class="cert-desc">Certification bâtiment</div>
-    </div>
-    <div class="cert reveal d1">
-      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-      <div class="cert-name">Garantie décennale</div>
-      <div class="cert-desc">Travaux assurés 10 ans</div>
-    </div>
-    <div class="cert reveal d2">
-      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"/></svg></div>
-      <div class="cert-name">RC Professionnelle</div>
-      <div class="cert-desc">Responsabilité civile</div>
-    </div>
-    <div class="cert reveal d3">
-      <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div class="cert-name">Devis sous 48h</div>
-      <div class="cert-desc">Gratuit, sans engagement</div>
-    </div>
-  </div>
-</div>
 
 <section class="section" id="faq">
   <div class="inner">
