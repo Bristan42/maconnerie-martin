@@ -394,9 +394,11 @@ footer{background:var(--navy);padding:56px 24px 32px}
 
 <div class="devis-layout">
   <div class="devis-form-wrap reveal">
-    <div class="form-title">Demandez votre devis gratuit</div>
+    <h1 class="form-title">Demandez votre devis gratuit</h1>
     <div class="form-sub">Remplissez ce formulaire — Thomas vous recontacte sous 48h pour fixer une visite sur place.</div>
-    <form action="/merci/" method="POST">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS">
+      <input type="hidden" name="from_name" value="Maçonnerie Martin — Site web">
       <div class="form-row">
         <div class="form-group">
           <label for="prenom">Prénom *</label>
