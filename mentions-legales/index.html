@@ -37,6 +37,11 @@
   --sh:0 2px 12px rgba(28,43,58,.08);
   --sh-lg:0 8px 32px rgba(28,43,58,.14);
 }
+@media(prefers-color-scheme:dark){
+  :root{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
+}
+:root[data-theme="dark"]{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
+:root[data-theme="light"]{--bg:#FFFFFF;--bg-alt:#F6F4F0;--card:#FFFFFF;--text:#1A1A1A;--text-2:#5E5A54;--text-3:#6E6A63;--border:#E0DDD8}
 html{scroll-behavior:smooth}
 body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;color:var(--text);background:var(--bg);line-height:1.6}
 a{color:inherit;text-decoration:none}
@@ -210,7 +215,7 @@ header{position:sticky;top:0;z-index:200;background:var(--navy);border-bottom:1p
 .zone-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .chip{display:flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--text-2)}
 .chip svg{color:var(--accent);flex-shrink:0}
-.chip.hi{background:rgba(200,98,26,.08);border-color:rgba(200,98,26,.3);color:var(--accent);font-weight:700}
+.chip.hi{background:rgba(200,98,26,.08);border-color:rgba(200,98,26,.3);color:var(--accent);font-weight:700}.zone-chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1.5px solid var(--border);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--text-2);text-decoration:none;transition:border-color .15s,color .15s}.zone-chip:hover{border-color:var(--accent);color:var(--accent)}
 
 /* ── PROCESSUS (timeline) ── */
 .proc-timeline{margin-top:48px;position:relative;padding:0 12px}
@@ -257,14 +262,14 @@ footer{background:var(--navy);padding:56px 24px 32px}
 .footer-col ul a:hover{color:#fff}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:24px;flex-wrap:wrap}
 .footer-bottom-txt{font-size:12px;color:rgba(255,255,255,.6)}
-.footer-bottom-txt a{color:rgba(255,255,255,.75);transition:color .15s}
+.footer-bottom-txt a{color:rgba(255,255,255,.75);text-decoration:underline;transition:color .15s}
 .footer-bottom-txt a:hover{color:#fff}
 
 /* ── MOBILE STICKY CTA ── */
 .mob-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom));gap:10px}
 .mob-cta-call{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:13px 10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
 .mob-cta-call svg{color:var(--accent);flex-shrink:0}
-.mob-cta-devis{flex:1.4;display:flex;align-items:center;justify-content:center;padding:13px 10px;background:var(--accent);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
+.mob-cta-devis{flex:1.4;display:flex;align-items:center;justify-content:center;padding:13px 10px;background:var(--accent-btn);border-radius:8px;font-size:14px;font-weight:700;color:#fff;line-height:1}
 .mob-cta-devis:hover{background:var(--accent-h)}
 
 /* ── RESPONSIVE ── */
@@ -322,11 +327,6 @@ footer{background:var(--navy);padding:56px 24px 32px}
 }
 </style>
 <style>
-@media(prefers-color-scheme:dark){
-  :root{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
-}
-:root[data-theme="dark"]{--bg:#111827;--bg-alt:#1a2535;--card:#1e2d40;--text:#F0EDE8;--text-2:#9BA5B4;--text-3:#6B7685;--border:#2a3a4e}
-:root[data-theme="light"]{--bg:#FFFFFF;--bg-alt:#F6F4F0;--card:#FFFFFF;--text:#1A1A1A;--text-2:#5E5A54;--text-3:#6E6A63;--border:#E0DDD8}
 .card{background:var(--card,var(--bg))}
 </style>
 <style>
@@ -562,5 +562,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+<script>document.querySelectorAll('input[name="redirect"]').forEach(function(i){i.value=location.origin+"/merci/";});</script>
 </body>
 </html>
